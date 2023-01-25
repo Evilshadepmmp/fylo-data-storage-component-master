@@ -1,0 +1,197 @@
+:root{
+
+    /* Primary */
+    --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    
+    /* Neutral */
+ 
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+
+    --fontzise: 14px;
+
+    --font-family: 'Raleway', sans-serif; /* 400 700 */
+}
+body{
+    background-image: url(/img/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.main_div{
+    background-color: var(--DarkBlue);
+    padding-left: 3em;
+    border-radius: .7rem 6rem .7rem .7rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 2rem;
+}
+.logo{
+margin-top: 3rem;
+
+}
+.iconos{
+    margin-top: 1.8rem;
+    display: flex;
+}
+.icon{
+    padding: .7rem;
+    border-radius: .8rem;
+    margin-right: .9rem;
+    background-color: var(--VeryDarkBlue);
+}
+.link{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover{
+    transform: scale(1.1); 
+    transition: 170ms;
+}
+.div_storage{
+    background-color: var(--DarkBlue);
+    border-radius: .7rem;
+    height: 11.5rem;
+    width: 20rem;
+}
+.info-text{
+    font-family: var(--font-family);
+    font-size: var(--fontzise);
+    color: var(--PaleBlue);
+    font-weight: 400;
+    text-align: center;
+    padding-top: 2rem;
+}
+.info-text span{
+    font-weight: 700;
+    line-height: 2;
+}
+/* barra de progreso*/
+.barra{
+    background: var(--VeryDarkBlue);
+    width: 260px;
+    height: 18px;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progreso{
+    height: 14px;
+    border-radius: 1.2rem;
+    margin-left: .2rem;
+    width: 0%;
+    background: var(--Gradient);
+    animation: claro 1s ease-in-out forwards;
+    overflow: hidden;
+}
+.ball{
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background: var(--PaleBlue);
+    float: right;
+    margin-top: .05rem;
+    margin-right: .1rem;
+}
+
+@keyframes claro{
+    100%{
+        width: 75%;
+    }
+}
+/* Fin barra de progreso*/
+
+.dato{
+    width: 260px;
+    color: var(--PaleBlue);
+    display: flex;
+    justify-content: space-between; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.dato-gb{
+    background-color: white;
+    width: 180px;
+    height: 70px;
+    display: grid;
+    place-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem;
+}
+.dato-gb p{
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+}
+.dato-gb span{
+    font-size: var(--fontzise);
+    color: var(--GrayishBlue);
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    vertical-align: middle;
+}
+.footer{
+    margin-top: 4rem;
+}
+
+@media (min-width: 900px) {
+    body{
+        background-image: url(/img/bg-desktop.png);
+        background-color: var(--VeryDarkBlue);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+    }
+    .dato,
+    .barra{
+        width: 460px;
+    }
+    .main_div{
+        margin-right: 1.5rem;
+        width: 20rem;
+    }
+    .div_storage{
+        margin-top: 1.8rem;
+        width: 33.6rem;
+        height: 9.7rem;
+    }
+    .info-text{
+        text-align: start;
+        padding-left: 2.7rem;
+    }
+    .dato-gb{
+        border-bottom-right-radius: 0rem;
+        margin-top: -12rem;
+        margin-right: 2.5rem;
+    }
+    .tiangulo{
+        height: 0rem;
+        width: 0rem;
+        border-bottom: 2.5rem solid white;
+        border-left: 1.25rem solid transparent;
+        border-right: 1.25rem solid transparent;
+        transform: rotate(25deg);
+        margin-left: 29.3rem;
+        margin-top: -1.9rem;
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: rgb(194, 232, 232);
+}
+.attribution a { 
+    color: hsl(0, 82%, 78%); 
+}
